@@ -23,7 +23,7 @@ export function CountdownProvider({children}: CountdownProviderProps){
 
     const {startNewChallenge, } = useContext(ChallengesContext);
 
-    const [time, setTime] = useState( 0.1 * 60);
+    const [time, setTime] = useState( 25 * 60);
     const [isActive, setIsActive] = useState(false);
     const [hasFinished, sethasFineshed] = useState(false)
 
@@ -38,7 +38,7 @@ export function CountdownProvider({children}: CountdownProviderProps){
         clearTimeout(countdownTimeout)
         setIsActive(false);
         sethasFineshed(false)
-        setTime(0.1 * 60); //Retorna para 25 minutos quando aperta em abandonar ciclo
+        setTime(25 * 60); //Retorna para 25 minutos quando aperta em abandonar ciclo
         
     }
 
